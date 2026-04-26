@@ -35,7 +35,7 @@ export default function Footer(){
           <div style={styles.links}>
             <h4 style={styles.linksTitle}>Contato</h4>
             <p style={styles.contactItem}>📧 contato@sandre.dev</p>
-            <p style={styles.contactItem}>📱 +55 (11) 99999-9999</p>
+            <p style={styles.contactItem}>📱 +55 62 3098-5660</p>
             <p style={styles.contactItem}>📍 São Paulo, SP</p>
           </div>
         </div>

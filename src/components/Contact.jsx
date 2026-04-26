@@ -8,7 +8,30 @@ export default function Contact(){
         <p style={styles.subtitle}>Entre em contato para discutirmos seu projeto</p>
         
         <div className="wrapper" style={styles.wrapper}>
-          <form className="form" style={styles.form} onSubmit={(e)=>{e.preventDefault(); alert('Mensagem simulada! Em produção, isso será conectado a um backend ou serviço de email.');}}>
+        <form className="form" style={styles.form} onSubmit={async (e)=>{
+            e.preventDefault()
+            const form = e.currentTarget
+            const formData = new FormData(form)
+            const payload = Object.fromEntries(formData.entries())
+            try {
+              const resp = await fetch('/api/contacts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+              })
+              if (!resp.ok) throw new Error('HTTP error')
+              const data = await resp.json()
+              if (data?.id) {
+                alert('Contato registrado com sucesso! ID: ' + data.id)
+                form.reset()
+              } else {
+                alert('Falha ao registrar contato')
+              }
+            } catch (err) {
+              console.error(err)
+              alert('Erro de conexão com o servidor')
+            }
+          }}>
             <div className="row" style={styles.row}>
               <div style={styles.field}>
                 <label htmlFor="name" style={styles.label}>Nome</label>
@@ -28,6 +51,9 @@ export default function Contact(){
               <textarea id="message" name="message" placeholder="Conte-nos sobre seu projeto..." required rows={5} style={styles.textarea} />
             </div>
             <button type="submit" style={styles.button}>Enviar Mensagem</button>
+            <button type="button" style={styles.whatsAppButton} onClick={()=>{ window.open('https://wa.me/556230985660', '_blank'); }}>
+              Conversar no WhatsApp
+            </button>
           </form>
           
           <div style={styles.info}>
@@ -117,6 +143,18 @@ const styles = {
     fontSize: '1rem',
     fontWeight: 600,
     marginTop: '10px'
+  },
+  whatsAppButton: {
+    padding: '12px 20px',
+    borderRadius: '8px',
+    border: 'none',
+    background: '#25D366',
+    color: '#0b1220',
+    cursor: 'pointer',
+    fontSize: '1rem',
+    fontWeight: 700,
+    marginTop: '10px',
+    width: 'fit-content'
   },
   info: { display: 'flex', flexDirection: 'column', gap: '24px' },
   infoItem: { display: 'flex', alignItems: 'center', gap: '16px' },
