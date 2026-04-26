@@ -1,10 +1,19 @@
-/* Paleta baseada no branding minimalista com base no logo/banner */
+/* Paleta baseada no branding do logo sandre.dev */
 :root {
   --bg: #0b1220;
+  --bg-dark: #0a0f17;
   --surface: #111a29;
   --text: #eaf2ff;
-  --muted: #96a6b8;
-  --primary: #1bd9ff;
-  --secondary: #2a8bdc;
-  --accent: #4bd1ff;
+  --text-muted: #96a6b8;
+  
+  /* Cores principais do logo */
+  --primary: #06C1F2;
+  --primary-light: #4bd1ff;
+  --secondary: #0595F1;
+  --secondary-dark: #0362F7;
+  --accent: #04B8F3;
+  
+  /* Cores de apoio */
+  --success: #22c55e;
+  --error: #ef4444;
 }

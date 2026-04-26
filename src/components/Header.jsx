@@ -1,9 +1,12 @@
 import React from 'react'
+import logo from '../assets/logo.svg'
 
 export default function Header() {
   return (
     <header style={styles.header}>
-      <div style={styles.brand}>Sandre.dev</div>
+      <div style={styles.brand}>
+        <img src={logo} alt="Sandre.dev" style={styles.logo} />
+      </div>
       <nav aria-label="menu-principal" style={styles.nav}>
         <a href="#home" style={styles.link}>Início</a>
         <a href="#about" style={styles.link}>Sobre</a>
@@ -19,20 +22,33 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '16px 24px',
-    position: 'sticky',
+    padding: '20px 40px',
+    position: 'fixed',
     top: 0,
-    background: 'rgba(0,0,0,0.6)',
-    color: '#fff',
-    zIndex: 10
+    left: 0,
+    right: 0,
+    background: 'rgba(11, 18, 32, 0.85)',
+    backdropFilter: 'blur(12px)',
+    borderBottom: '1px solid rgba(6, 193, 242, 0.1)',
+    zIndex: 100
   },
   brand: {
-    fontWeight: 700,
-    letterSpacing: 0.5
+    display: 'flex',
+    alignItems: 'center'
+  },
+  logo: {
+    height: '40px',
+    width: 'auto'
   },
   nav: {
     display: 'flex',
-    gap: '16px'
+    gap: '32px'
   },
-  link: { color: '#fff', textDecoration: 'none' }
+  link: { 
+    color: '#eaf2ff', 
+    textDecoration: 'none',
+    fontSize: '15px',
+    fontWeight: 500,
+    transition: 'color 0.2s'
+  }
 }

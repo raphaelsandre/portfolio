@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import './variables.css';
 
 :root {
@@ -5,27 +6,86 @@
   --text: #eaf2ff;
   --muted: #96a6b8;
   --surface: #111a29;
-  --primary: #1bd9ff;
-  --secondary: #2a8bdc;
-  --accent: #4bd1ff;
+  --primary: #06C1F2;
+  --secondary: #0595F1;
+  --accent: #04B8F3;
 }
 
-* { box-sizing: border-box; }
-html, body, #root { height: 100%; }
+* { 
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+html { 
+  scroll-behavior: smooth;
+}
+
+html, body, #root { 
+  height: 100%; 
+}
+
 body {
   margin: 0;
-  font-family: Inter, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  margin: 0;
+  font-weight: 700;
+}
+
+p { 
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #5a6a7a;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(6, 193, 242, 0.15);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
   background: var(--bg);
 }
 
-h1, h2, h3 { margin: 0 0 8px; }
-p { margin: 0 0 8px; }
+::-webkit-scrollbar-thumb {
+  background: var(--surface);
+  border-radius: 4px;
+}
 
-.container { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
-
-/* Utility classes (if needed later) */
-.text-center { text-align: center; }
-.mt-4 { margin-top: 16px; }
-.btn { padding: 10px 16px; border-radius: 6px; border: none; cursor: pointer; }
-.btn.primary { background: var(--accent); color: #001018; }
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

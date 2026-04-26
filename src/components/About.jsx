@@ -1,20 +1,119 @@
 import React from 'react'
+import logo from '../assets/logo.svg'
+
+const stats = [
+  { number: '50+', label: 'Projetos Entregues' },
+  { number: '5+', label: 'Anos de Experiência' },
+  { number: '30+', label: 'Clientes Satisfeitos' },
+  { number: '99%', label: 'Taxa de Satisfação' }
+]
 
 export default function About(){
   return (
     <section id="about" style={styles.section} aria-label="Sobre a empresa">
       <div style={styles.container}>
-        <h2 style={styles.title}>Quem somos</h2>
-        <p style={styles.text}>Somos uma equipe de desenvolvedores focada em entregar software moderno, estável e de alto desempenho para startups e empresas estabelecidas. Priorizamos simplicidade, qualidade de código e experiência do usuário.
-        </p>
+        <div style={styles.grid}>
+          <div style={styles.content}>
+            <h2 style={styles.title}>Transformamos ideias em <span style={styles.highlight}>resultados</span></h2>
+            <p style={styles.text}>
+              Somos uma equipe de desenvolvedores e designers apaixonados por criar soluções digitais inovadoras. 
+              Nosso foco é entregar software de alta qualidade que realmente faz diferença para o negócio dos nossos clientes.
+            </p>
+            <p style={styles.text}>
+              Com experiência em diversas tecnologias e setores, we've helped empresas de todos os tamanhos a alcançar 
+              seus objetivos através da transformação digital. Da concepção ao lançamento, estamos juntos em cada etapa.
+            </p>
+            <div style={styles.stats}>
+              {stats.map((stat, i) => (
+                <div key={i} style={styles.stat}>
+                  <span style={styles.statNumber}>{stat.number}</span>
+                  <span style={styles.statLabel}>{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={styles.imageWrapper}>
+            <img src={logo} alt="Sandre.dev" style={styles.logo} />
+            <div style={styles.badge}>
+              <span style={styles.badgeText}>Desenvolvimento</span>
+              <span style={styles.badgeText}>Design</span>
+              <span style={styles.badgeText}>Inovação</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
 
 const styles = {
-  section: { padding: '40px 20px', background: '#f7f7f7' },
-  container: { maxWidth: 1000, margin: '0 auto' },
-  title: { fontSize: 28, margin: '0 0 12px' },
-  text: { fontSize: 16, lineHeight: 1.6, color: '#333' }
+  section: { padding: '100px 20px', background: '#111a29' },
+  container: { maxWidth: '1200px', margin: '0 auto' },
+  grid: { 
+    display: 'grid', 
+    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
+    gap: '60px',
+    alignItems: 'center'
+  },
+  content: {},
+  title: { 
+    fontSize: '2.5rem', 
+    fontWeight: 800, 
+    margin: 0, 
+    color: '#fff',
+    lineHeight: 1.2
+  },
+  highlight: {
+    color: '#06C1F2'
+  },
+  text: { 
+    fontSize: '1.1rem', 
+    lineHeight: 1.8, 
+    color: '#96a6b8',
+    marginTop: '20px'
+  },
+  stats: {
+    display: 'flex',
+    gap: '40px',
+    marginTop: '40px',
+    flexWrap: 'wrap'
+  },
+  stat: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  statNumber: {
+    fontSize: '2.5rem',
+    fontWeight: 800,
+    color: '#06C1F2'
+  },
+  statLabel: {
+    fontSize: '0.9rem',
+    color: '#96a6b8'
+  },
+  imageWrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '24px'
+  },
+  logo: {
+    width: '100%',
+    maxWidth: '400px',
+    height: 'auto'
+  },
+  badge: {
+    display: 'flex',
+    gap: '12px',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
+  },
+  badgeText: {
+    padding: '8px 16px',
+    background: 'rgba(6, 193, 242, 0.15)',
+    border: '1px solid rgba(6, 193, 242, 0.3)',
+    borderRadius: '20px',
+    fontSize: '0.875rem',
+    color: '#06C1F2'
+  }
 }
