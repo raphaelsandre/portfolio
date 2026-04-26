@@ -1,0 +1,10 @@
+/* Paleta baseada no branding minimalista com base no logo/banner */
+:root {
+  --bg: #0b1220;
+  --surface: #111a29;
+  --text: #eaf2ff;
+  --muted: #96a6b8;
+  --primary: #1bd9ff;
+  --secondary: #2a8bdc;
+  --accent: #4bd1ff;
+}
