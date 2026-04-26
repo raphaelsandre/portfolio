@@ -1,10 +1,21 @@
-/* Responsive Styles */
+/* Responsive Styles - Force no overflow */
+* {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
 
 /* Header responsivo */
 @media (max-width: 768px) {
   .header {
     padding: 16px 20px !important;
     flex-wrap: wrap;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
   }
   
   .header .logo {
@@ -121,34 +132,70 @@
 /* Contact responsivo */
 @media (max-width: 768px) {
   .contact {
-    padding: 60px 20px !important;
+    padding: 60px 16px !important;
+    overflow-x: hidden !important;
+  }
+  
+  .contact > div {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
   
   .contact .title {
-    font-size: 1.75rem !important;
+    font-size: 1.5rem !important;
+    padding: 0 8px !important;
+  }
+  
+  .contact .subtitle {
+    padding: 0 8px !important;
   }
   
   .contact .wrapper {
     grid-template-columns: 1fr !important;
-    gap: 40px !important;
-  }
-  
-  .contact .row {
-    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
   
   .contact .form {
     gap: 16px !important;
+    max-width: 100% !important;
+  }
+  
+  .contact .form > div {
+    max-width: 100% !important;
+  }
+  
+  .contact .row {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .contact .field {
+    max-width: 100% !important;
+  }
+  
+  .contact .input,
+  .contact .textarea {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   
   .contact .info {
     order: -1;
+    max-width: 100% !important;
   }
   
   .contact .info-item {
     flex-direction: row !important;
     align-items: flex-start !important;
     gap: 12px !important;
+  }
+  
+  .contact .button {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
