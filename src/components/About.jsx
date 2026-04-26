@@ -10,7 +10,7 @@ const stats = [
 
 export default function About(){
   return (
-    <section id="about" style={styles.section} aria-label="Sobre a empresa">
+    <section id="about" className="about" style={styles.section} aria-label="Sobre a empresa">
       <div style={styles.container}>
         <div style={styles.grid}>
           <div style={styles.content}>
@@ -23,17 +23,17 @@ export default function About(){
               Com experiência em diversas tecnologias e setores, we've helped empresas de todos os tamanhos a alcançar 
               seus objetivos através da transformação digital. Da concepção ao lançamento, estamos juntos em cada etapa.
             </p>
-            <div style={styles.stats}>
+            <div className="stats" style={styles.stats}>
               {stats.map((stat, i) => (
-                <div key={i} style={styles.stat}>
-                  <span style={styles.statNumber}>{stat.number}</span>
+                <div key={i} className="stat" style={styles.stat}>
+                  <span className="stat-number" style={styles.statNumber}>{stat.number}</span>
                   <span style={styles.statLabel}>{stat.label}</span>
                 </div>
               ))}
             </div>
           </div>
           <div style={styles.imageWrapper}>
-            <img src={logo} alt="Sandre.dev" style={styles.logo} />
+            <img src={logo} alt="Sandre.dev" className="logo" style={styles.logo} />
             <div style={styles.badge}>
               <span style={styles.badgeText}>Desenvolvimento</span>
               <span style={styles.badgeText}>Design</span>

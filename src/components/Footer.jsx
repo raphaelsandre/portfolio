@@ -3,9 +3,9 @@ import logo from '../assets/logo.svg'
 
 export default function Footer(){
   return (
-    <footer style={styles.footer}>
+    <footer className="footer" style={styles.footer}>
       <div style={styles.container}>
-        <div style={styles.grid}>
+        <div className="grid" style={styles.grid}>
           <div style={styles.brand}>
             <img src={logo} alt="Sandre.dev" style={styles.logo} />
             <p style={styles.desc}>Desenvolvimento de soluções digitais modernas e de alta performance.</p>

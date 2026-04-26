@@ -1,0 +1,182 @@
+/* Responsive Styles */
+
+/* Header responsivo */
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 20px !important;
+    flex-wrap: wrap;
+  }
+  
+  .header .logo {
+    height: 32px !important;
+  }
+  
+  .header nav {
+    gap: 16px !important;
+  }
+  
+  .header nav a {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 16px !important;
+  }
+  
+  .header nav {
+    gap: 12px !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .header nav a {
+    font-size: 13px !important;
+  }
+}
+
+/* Hero responsivo */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 60px !important;
+    min-height: auto !important;
+  }
+  
+  .hero .title {
+    font-size: 2rem !important;
+  }
+  
+  .hero .subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .hero .cta-group {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  
+  .hero .cta-primary,
+  .hero .cta-secondary {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+/* Services responsivo */
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 20px !important;
+  }
+  
+  .services .title {
+    font-size: 1.75rem !important;
+  }
+  
+  .services .grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .services .card {
+    padding: 24px !important;
+  }
+}
+
+/* About responsivo */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 20px !important;
+  }
+  
+  .about .grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  
+  .about .title {
+    font-size: 1.75rem !important;
+  }
+  
+  .about .stats {
+    gap: 20px !important;
+    justify-content: flex-start !important;
+  }
+  
+  .about .stat {
+    min-width: 100px !important;
+  }
+  
+  .about .stat-number {
+    font-size: 1.75rem !important;
+  }
+  
+  .about .logo {
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+/* Contact responsivo */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 20px !important;
+  }
+  
+  .contact .title {
+    font-size: 1.75rem !important;
+  }
+  
+  .contact .wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  
+  .contact .row {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .contact .form {
+    gap: 16px !important;
+  }
+  
+  .contact .info {
+    order: -1;
+  }
+  
+  .contact .info-item {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+}
+
+/* Footer responsivo */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px !important;
+  }
+  
+  .footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    text-align: center !important;
+  }
+  
+  .footer .brand {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .footer .social {
+    justify-content: center !important;
+  }
+  
+  .footer .bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+}

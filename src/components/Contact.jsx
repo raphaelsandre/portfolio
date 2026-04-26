@@ -2,14 +2,14 @@ import React from 'react'
 
 export default function Contact(){
   return (
-    <section id="contact" aria-label="Contato" style={styles.section}>
+    <section id="contact" className="contact" aria-label="Contato" style={styles.section}>
       <div style={styles.container}>
         <h2 style={styles.title}>Vamos criar algo <span style={styles.highlight}>incrível</span> juntos?</h2>
         <p style={styles.subtitle}>Entre em contato para discutirmos seu projeto</p>
         
-        <div style={styles.wrapper}>
-          <form style={styles.form} onSubmit={(e)=>{e.preventDefault(); alert('Mensagem simulada! Em produção, isso será conectado a um backend ou serviço de email.');}}>
-            <div style={styles.row}>
+        <div className="wrapper" style={styles.wrapper}>
+          <form className="form" style={styles.form} onSubmit={(e)=>{e.preventDefault(); alert('Mensagem simulada! Em produção, isso será conectado a um backend ou serviço de email.');}}>
+            <div className="row" style={styles.row}>
               <div style={styles.field}>
                 <label htmlFor="name" style={styles.label}>Nome</label>
                 <input id="name" name="name" placeholder="Seu nome" required style={styles.input} />

@@ -35,7 +35,7 @@ const services = [
 
 export default function Services(){
   return (
-    <section id="services" style={styles.section} aria-label="Serviços">
+    <section id="services" className="services" style={styles.section} aria-label="Serviços">
       <div style={styles.container}>
         <h2 style={styles.title}>Nossos Serviços</h2>
         <p style={styles.subtitle}>Soluções completas para transformar sua ideia em um produto digital de sucesso</p>

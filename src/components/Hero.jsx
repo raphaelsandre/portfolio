@@ -3,7 +3,7 @@ import banner from '../assets/banner.svg'
 
 export default function Hero() {
   return (
-    <section id="home" style={styles.hero} aria-label="Hero">
+    <section id="home" className="hero" style={styles.hero} aria-label="Hero">
       <div style={styles.background}>
         <img src={banner} alt="" style={styles.bannerImg} />
       </div>
@@ -15,9 +15,9 @@ export default function Hero() {
         <p style={styles.subtitle}>
           Criamos soluções digitais modernas, escaláveis e de alta performance para transformar sua visão em realidade.
         </p>
-        <div style={styles.ctaGroup}>
-          <button style={styles.ctaPrimary}>Solicite um orçamento</button>
-          <button style={styles.ctaSecondary}>Ver projetos</button>
+        <div className="cta-group" style={styles.ctaGroup}>
+          <button className="cta-primary" style={styles.ctaPrimary}>Solicite um orçamento</button>
+          <button className="cta-secondary" style={styles.ctaSecondary}>Ver projetos</button>
         </div>
       </div>
     </section>

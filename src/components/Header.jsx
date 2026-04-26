@@ -3,7 +3,7 @@ import logo from '../assets/logo.svg'
 
 export default function Header() {
   return (
-    <header style={styles.header}>
+    <header className="header" style={styles.header}>
       <div style={styles.brand}>
         <img src={logo} alt="Sandre.dev" style={styles.logo} />
       </div>
