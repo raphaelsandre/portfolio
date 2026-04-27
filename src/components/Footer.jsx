@@ -17,7 +17,7 @@ export default function Footer(){
             <img src={logo} alt="Sandre.dev" style={styles.logo} />
             <p style={styles.desc}>Desenvolvimento de soluções digitais modernas e de alta performance.</p>
             <div style={styles.social}>
-              <a href="#" style={styles.socialLink}>GitHub</a>
+              <a href="https://github.com/sandre.dev" style={styles.socialLink}>GitHub</a>
               <a href="#" style={styles.socialLink}>LinkedIn</a>
               <a href="#" style={styles.socialLink}>Twitter</a>
             </div>
@@ -43,7 +43,6 @@ export default function Footer(){
             <h4 style={styles.linksTitle}>Contato</h4>
             <p style={styles.contactItem}>📧 contato@sandre.dev</p>
             <p style={styles.contactItem}>📱 +55 62 3098-5660</p>
-            <p style={styles.contactItem}>📍 São Paulo, SP</p>
           </div>
         </div>
         
