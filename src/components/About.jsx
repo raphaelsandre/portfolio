@@ -48,7 +48,7 @@ export default function About(){
 
 const styles = {
   section: { padding: '100px 20px', background: '#111a29' },
-  container: { maxWidth: '1200px', margin: '0 auto' },
+  container: { maxWidth: '1200px', margin: '0 auto', padding: '20px 20px'},
   grid: { 
     display: 'grid', 
     gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
