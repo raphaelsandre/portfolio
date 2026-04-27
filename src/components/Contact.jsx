@@ -68,7 +68,7 @@ export default function Contact(){
               <span style={styles.infoIcon}>📱</span>
               <div>
                 <strong style={styles.infoLabel}>WhatsApp</strong>
-                <p style={styles.infoValue}>+55 (11) 99999-9999</p>
+                <p style={styles.infoValue}>+55 (62) 3098-5660</p>
               </div>
             </div>
             <div style={styles.infoItem}>
