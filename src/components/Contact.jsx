@@ -154,7 +154,6 @@ const styles = {
     fontSize: '1rem',
     fontWeight: 700,
     marginTop: '10px',
-    width: 'fit-content'
   },
   info: { display: 'flex', flexDirection: 'column', gap: '24px' },
   infoItem: { display: 'flex', alignItems: 'center', gap: '16px' },
