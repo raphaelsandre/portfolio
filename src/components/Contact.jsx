@@ -73,10 +73,6 @@ export default function Contact(){
             </div>
             <div style={styles.infoItem}>
               <span style={styles.infoIcon}>📍</span>
-              <div>
-                <strong style={styles.infoLabel}>Localização</strong>
-                <p style={styles.infoValue}>São Paulo, SP - Brasil</p>
-              </div>
             </div>
           </div>
         </div>
@@ -145,14 +141,14 @@ const styles = {
     marginTop: '10px'
   },
   whatsAppButton: {
-    padding: '12px 20px',
+    padding: '16px 20px',
     borderRadius: '8px',
     border: 'none',
     background: '#25D366',
     color: '#0b1220',
     cursor: 'pointer',
     fontSize: '1rem',
-    fontWeight: 700,
+    fontWeight: 600,
     marginTop: '10px',
   },
   info: { display: 'flex', flexDirection: 'column', gap: '24px' },
