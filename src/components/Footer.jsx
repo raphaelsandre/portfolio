@@ -2,10 +2,17 @@ import React from 'react'
 import logo from '../assets/logo.svg'
 
 export default function Footer(){
+  const [cols, setCols] = React.useState(2)
+  React.useEffect(() => {
+    const onResize = () => setCols(window.innerWidth < 700 ? 1 : 2)
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
   return (
     <footer className="footer" style={styles.footer}>
       <div style={styles.container}>
-        <div className="grid" style={styles.grid}>
+        <div className="grid" style={{ ...styles.grid, gridTemplateColumns: cols === 2 ? 'repeat(2, 1fr)' : '1fr' }}>
           <div style={styles.brand}>
             <img src={logo} alt="Sandre.dev" style={styles.logo} />
             <p style={styles.desc}>Desenvolvimento de soluções digitais modernas e de alta performance.</p>
@@ -32,7 +39,7 @@ export default function Footer(){
             <a href="#" style={styles.link}>Consultoria</a>
           </div>
           
-          <div style={styles.links}>
+          <div style={{ ...styles.links, gridColumn: cols === 2 ? 'span 2' : 'auto' }}>
             <h4 style={styles.linksTitle}>Contato</h4>
             <p style={styles.contactItem}>📧 contato@sandre.dev</p>
             <p style={styles.contactItem}>📱 +55 62 3098-5660</p>
