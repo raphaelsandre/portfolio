@@ -47,7 +47,7 @@ export default function About(){
 }
 
 const styles = {
-  section: { padding: '100px 20px', background: '#111a29' },
+  section: { padding: '120px 20px', background: '#111a29' },
   container: { maxWidth: '1000px', margin: '0 auto'},
   grid: { 
     display: 'grid', 
@@ -55,7 +55,7 @@ const styles = {
     gap: '60px',
     alignItems: 'center'
   },
-  content: {},
+  content: { textAlign: 'center' },
   title: { 
     fontSize: '2.5rem', 
     fontWeight: 800, 
@@ -96,18 +96,24 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '24px'
+    gap: '24px',
+    backgroundColor: '#111a29',
+    padding: '20px',
+    borderRadius: '12px',
+    boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.04), 0 8px 24px rgba(0,0,0,0.25)'
   },
   logo: {
     width: '100%',
-    maxWidth: '400px',
-    height: 'auto'
+    maxWidth: '420px',
+    height: 'auto',
+    display: 'block',
+    margin: '0 auto'
+    ,
+    filter: 'drop-shadow(0 0 8px rgba(6,193,242,0.6))'
   },
   badge: {
-    display: 'flex',
-    gap: '12px',
-    flexWrap: 'wrap',
-    justifyContent: 'center'
+    display: 'none',
+    // badges removed for cleaner about section as requested
   },
   badgeText: {
     padding: '8px 16px',
