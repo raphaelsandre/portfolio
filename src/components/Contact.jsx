@@ -71,12 +71,7 @@ export default function Contact(){
                 <p style={styles.infoValue}>+55 (62) 3098-5660</p>
               </div>
             </div>
-            <div style={styles.infoItem}>
-              <span style={styles.infoIcon}>📍</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
     </section>
   )
 }
