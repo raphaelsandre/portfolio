@@ -69,6 +69,7 @@ const styles = {
   text: { 
     fontSize: '1.1rem', 
     lineHeight: 1.8, 
+    padding: "0px 15px",
     color: '#96a6b8',
     marginTop: '20px'
   },
