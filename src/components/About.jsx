@@ -9,10 +9,17 @@ const stats = [
 ]
 
 export default function About(){
+  const [isNarrow, setIsNarrow] = React.useState(false)
+  React.useEffect(() => {
+    const onResize = () => setIsNarrow(window.innerWidth < 860)
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
   return (
     <section id="about" className="about" style={styles.section} aria-label="Sobre a empresa">
       <div style={styles.container}>
-        <div style={styles.grid}>
+        <div style={{ ...styles.grid, gridTemplateColumns: isNarrow ? 'repeat(auto-fill, minmax(320px, 1fr))' : 'repeat(auto-fit, minmax(420px, 1fr))' }}>
           <div style={styles.content}>
             <h2 style={styles.title}>Transformamos ideias em <span style={styles.highlight}>resultados</span></h2>
             <p style={styles.text}>
